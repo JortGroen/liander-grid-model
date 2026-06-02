@@ -1,0 +1,23 @@
+# GeoPackage data files (large, not tracked)
+*.gpkg
+
+# Generated outputs
+*.html
+*.xlsx
+*.csv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# IDE
+.vscode/
+.idea/
