@@ -1,0 +1,10 @@
+pandapower
+geopandas
+fiona
+shapely
+numpy
+pandas
+plotly
+matplotlib
+bokeh
+openpyxl
