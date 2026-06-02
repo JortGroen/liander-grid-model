@@ -350,13 +350,14 @@ def construct_grid():
     net.load.to_csv('loads.csv', index=True)
     pp.to_excel(net, 'extended_network.xlsx', include_empty_tables=False, include_results=True)
 
+    del gdf  # release GDAL/fiona resources before plotting
 
     fig = plot.plot_network(net)
     plot.draw_switches(fig, net)
     # plot.add_markers(fig, buses['pos'], color='orange')
     plot.show(fig)
-    
-    pass
+
+    import os; os._exit(0)  # skip GDAL/fiona destructor crash on Windows
 
 
 def external_bus_check(net, polygon):
